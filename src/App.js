@@ -7,10 +7,9 @@ function App() {
   //comportements
   
 
-  //affichage
-  return (
-    <div>{title}</div>
-  );
+  //affichage (render)
+  return <div>{title}</div>
+
 }
 
 export default App;
