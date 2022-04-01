@@ -1,4 +1,8 @@
-import { useState } from "react";
+import { Router } from "@reach/router";
+import { useState } from "react"
+import LoginPage from "./components/pages/LoginPage"
+import OrderPage from "./components/pages/OrderPage";
+
 
 function App() {
   //state (données)
@@ -8,8 +12,14 @@ function App() {
   
 
   //affichage (render)
-  return <div>{title}</div>
+  return (
+    <Router>
+       <LoginPage path="/" />
+       <OrderPage path="order"/>
+    </Router>
+  )
+  
 
 }
 
-export default App;
+export default App
