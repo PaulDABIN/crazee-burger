@@ -1,7 +1,7 @@
-import { Router } from "@reach/router";
+import { Router } from "@reach/router"
 import { useState } from "react"
 import LoginPage from "./components/pages/LoginPage"
-import OrderPage from "./components/pages/OrderPage";
+import OrderPage from "./components/pages/OrderPage"
 
 
 function App() {
@@ -14,12 +14,10 @@ function App() {
   //affichage (render)
   return (
     <Router>
-       <LoginPage path="/" />
+       <LoginPage path="/"/>
        <OrderPage path="order"/>
     </Router>
   )
-  
-
 }
 
 export default App
