@@ -2,6 +2,7 @@
 import { Link } from '@reach/router'
 import React from 'react'
 import { useState } from "react"
+import styledComponents from 'styled-components'
 import Form from '../molecules/Form'
 
 export default function LoginPage() {
@@ -23,12 +24,24 @@ export default function LoginPage() {
 
   //render
   return (
-    <div>
-      <div>Bienvenue chez nous</div>
+    <LoginPageStyled >
+      <div className='title'>Bienvenue chez nous</div>
 
       <p>Bonjour {username}</p>
 
       <Form handleSubmit={handleSubmit} inputValue={inputValue} handleChange={handleChange} />
-    </div>
+    </LoginPageStyled>
   )
 }
+
+const LoginPageStyled = styledComponents.div`
+  background: blue;
+
+  .title {
+    color : yellow;
+  }
+  
+  p{
+    color : red;
+  }
+`
