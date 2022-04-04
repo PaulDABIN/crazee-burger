@@ -2,15 +2,17 @@
 import { Link } from '@reach/router'
 import React from 'react'
 import { useState } from "react"
+import Form from '../molecules/Form'
 
 export default function LoginPage() {
   //state
   const [inputValue, setInputValue] = useState("")
   const [username, setUsername ]= useState("")
+
   
   //comportements
   const handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault() //permet d'empecher l'évènement par defaut du onSubmit 
     setUsername(inputValue)
     setInputValue("")
   }
@@ -26,11 +28,7 @@ export default function LoginPage() {
 
       <p>Bonjour {username}</p>
 
-      <form action="submit" onSubmit={handleSubmit}>
-        <p>Connectez-vous</p>
-        <input type="text" placeholder="Entrez un prénom...." value={inputValue} onChange={handleChange}/>
-        <button type="submit">Accéder à l'espace</button>
-      </form>
+      <Form handleSubmit={handleSubmit} inputValue={inputValue} handleChange={handleChange} />
     </div>
   )
 }
