@@ -2,7 +2,7 @@
 import { Link } from '@reach/router'
 import React from 'react'
 import { useState } from "react"
-import styledComponents from 'styled-components'
+import styled from 'styled-components'
 import Form from '../molecules/Form'
 
 export default function LoginPage() {
@@ -25,23 +25,31 @@ export default function LoginPage() {
   //render
   return (
     <LoginPageStyled >
-      <div className='title'>Bienvenue chez nous</div>
-
-      <p>Bonjour {username}</p>
-
       <Form handleSubmit={handleSubmit} inputValue={inputValue} handleChange={handleChange} />
     </LoginPageStyled>
   )
 }
 
-const LoginPageStyled = styledComponents.div`
-  background: blue;
 
-  .title {
-    color : yellow;
-  }
-  
-  p{
-    color : red;
-  }
+const LoginPageStyled = styled.div`
+height: 100vh;
+width: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+&::before {
+  content: "";
+  background: url(/images/login-background.jpg) rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
 `
