@@ -32,6 +32,7 @@ const FormStyled = styled.form`
         color: white;
         font-size: ${theme.fonts.P5};
     }
+    
     h2 {
         color: #8e8b8b;
         margin: 20px 10px 10px;
