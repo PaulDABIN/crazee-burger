@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { theme } from '../../../theme/index';
+import Button from '../../reusable/Button';
 
 export default function LoginForm({inputValue, handleSubmit, handleChange}) {
     return (
@@ -9,7 +10,7 @@ export default function LoginForm({inputValue, handleSubmit, handleChange}) {
             <h2>Connectez-vous</h2>
             <hr/>
             <input type="text" placeholder="Entrez un prénom...." value={inputValue} onChange={handleChange}/>
-            <button type="submit">Accéder à l'espace</button>
+            <Button label={"Accéder à l'espace"} />
       </FormStyled>
     )
 }
@@ -40,8 +41,5 @@ const FormStyled = styled.form`
         font-size: ${theme.fonts.P4};
     }
 
-    button {
-        width: 100%;
-    }
 
 `
