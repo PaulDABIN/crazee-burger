@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { theme } from '../../../theme/index';
-import Button from '../../reusable/Button';
+import PrimaryButton from '../../reusable/PrimaryButton';
 
 export default function LoginForm({inputValue, handleSubmit, handleChange}) {
     return (
@@ -10,7 +10,7 @@ export default function LoginForm({inputValue, handleSubmit, handleChange}) {
             <h2>Connectez-vous</h2>
             <hr/>
             <input type="text" placeholder="Entrez un prénom...." value={inputValue} onChange={handleChange}/>
-            <Button label={"Accéder à l'espace"} />
+            <PrimaryButton label={"Accéder à l'espace"} />
       </FormStyled>
     )
 }
