@@ -1,12 +1,17 @@
-import React from 'react'
-import styled from 'styled-components';
-import { theme } from '../../theme/index';
+import React from "react"
+import styled from "styled-components"
+import { theme } from "../../theme/index"
+import { IoChevronForward } from "react-icons/io5"
 
-
-export default function PrimaryButton({label}) {
-    return (
-        <PrimaryButtonStyled type="submit">{label}</PrimaryButtonStyled>
-    )
+export default function PrimaryButton({ label }) {
+  return (
+    <PrimaryButtonStyled type='submit'>
+      <span>{label}</span>
+      <div className='icon'>
+        <IoChevronForward />
+      </div>
+    </PrimaryButtonStyled>
+  )
 }
 
 const PrimaryButtonStyled = styled.button`
@@ -52,6 +57,3 @@ const PrimaryButtonStyled = styled.button`
     margin-left: 10px;
   }
 `
-
-
-
