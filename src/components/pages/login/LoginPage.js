@@ -3,7 +3,7 @@ import { Link } from '@reach/router'
 import React from 'react'
 import { useState } from "react"
 import styled from 'styled-components'
-import Form from '../molecules/Form'
+import LoginForm from './LoginForm'
 
 export default function LoginPage() {
   //state
@@ -25,7 +25,7 @@ export default function LoginPage() {
   //render
   return (
     <LoginPageStyled >
-      <Form handleSubmit={handleSubmit} inputValue={inputValue} handleChange={handleChange} />
+      <LoginForm handleSubmit={handleSubmit} inputValue={inputValue} handleChange={handleChange} />
     </LoginPageStyled>
   )
 }

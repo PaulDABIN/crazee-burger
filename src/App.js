@@ -1,7 +1,7 @@
 import { Router } from "@reach/router"
 import { useState } from "react"
-import LoginPage from "./components/pages/LoginPage"
-import OrderPage from "./components/pages/OrderPage"
+import LoginPage from "./components/pages/login/LoginPage"
+import OrderPage from "./components/pages/order/OrderPage"
 
 
 function App() {

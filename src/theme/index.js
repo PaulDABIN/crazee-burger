@@ -12,7 +12,6 @@ const fonts = {
     P3:"24px",
     P4:"36px",
     P5:"60px",
-
 }
 
 export const theme = {

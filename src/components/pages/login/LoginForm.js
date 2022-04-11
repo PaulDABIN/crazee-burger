@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { theme } from '../../theme/index';
+import { theme } from '../../../theme/index';
 
-export default function Form({inputValue, handleSubmit, handleChange}) {
+export default function LoginForm({inputValue, handleSubmit, handleChange}) {
     return (
         <FormStyled action="submit" onSubmit={handleSubmit}>
-            <h1 >Bienvenue chez nous</h1>
+            <h1>Bienvenue chez nous</h1>
             <h2>Connectez-vous</h2>
             <hr/>
             <input type="text" placeholder="Entrez un prénom...." value={inputValue} onChange={handleChange}/>
