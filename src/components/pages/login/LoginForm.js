@@ -1,22 +1,35 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { theme } from "../../../theme/index"
 import PrimaryButton from "../../reusable/PrimaryButton"
 import TextInput from "../../reusable/TextInput"
 
-export default function LoginForm({ inputValue, handleSubmit, handleChange }) {
+export default function LoginForm() {
+  //State
+  const [username, setUsername] = useState("")
+
+  //comportement
+  const handleSubmit = (event) => {
+    event.preventDefault() //permet d'empecher l'évènement par defaut du onSubmit
+  }
+
+  const handleChange = (event) => {
+    setUsername(event.target.value)
+  }
+
+  //rendering
   return (
-    <FormStyled action='submit' onSubmit={handleSubmit}>
+    <LoginFormStyled action='submit' onSubmit={handleSubmit}>
       <h1>Bienvenue chez nous</h1>
       <h2>Connectez-vous</h2>
       <hr />
-      <TextInput />
+      <TextInput placeholder={"Prénom"} value={username} onChange={handleChange} />
       <PrimaryButton label={"Accéder à l'espace"} />
-    </FormStyled>
+    </LoginFormStyled>
   )
 }
 
-const FormStyled = styled.form`
+const LoginFormStyled = styled.form`
   text-align: center;
   max-width: 500px;
   min-width: 400px;

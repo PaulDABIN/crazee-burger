@@ -3,9 +3,9 @@ import styled from "styled-components"
 import { theme } from "../../theme/index"
 import { IoChevronForward } from "react-icons/io5"
 
-export default function PrimaryButton({ label }) {
+export default function PrimaryButton({ label, onClick }) {
   return (
-    <PrimaryButtonStyled type='submit'>
+    <PrimaryButtonStyled onClick={onClick} type='submit'>
       <span>{label}</span>
       <div className='icon'>
         <IoChevronForward />

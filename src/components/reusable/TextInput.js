@@ -3,11 +3,11 @@ import styled from "styled-components"
 import { BsPersonCircle } from "react-icons/bs"
 import { theme } from "../../theme"
 
-export default function TextInput({ inputValue, handleChange }) {
+export default function TextInput({ placeholder, value, onChange }) {
   return (
     <TextInputStyled>
       <BsPersonCircle className='icon' />
-      <input type='text' placeholder='Entrez un prénom....' value={inputValue} onChange={handleChange} />
+      <input type='text' placeholder={placeholder} value={value} onChange={onChange} />
     </TextInputStyled>
   )
 }
@@ -21,6 +21,7 @@ const TextInputStyled = styled.div`
   margin: 18px 0; // should be there or in parent style?
   /* height: 17px; // add this if you want pixel perfect with Button Height */
   white-space: nowrap;
+
   .icon {
     font-size: ${theme.fonts.P0};
     margin-right: ${theme.gridUnit * 1.6}px;
