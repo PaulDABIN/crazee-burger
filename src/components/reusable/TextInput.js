@@ -3,11 +3,11 @@ import styled from "styled-components"
 import { BsPersonCircle } from "react-icons/bs"
 import { theme } from "../../theme"
 
-export default function TextInput({ placeholder, value, onChange }) {
+export default function TextInput({ placeholder, value, onChange, ...restProps }) {
   return (
     <TextInputStyled>
       <BsPersonCircle className='icon' />
-      <input type='text' placeholder={placeholder} value={value} onChange={onChange} />
+      <input type='text' placeholder={placeholder} value={value} onChange={onChange} {...restProps} />
     </TextInputStyled>
   )
 }

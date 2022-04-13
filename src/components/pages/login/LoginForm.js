@@ -1,3 +1,4 @@
+import { navigate } from "@reach/router"
 import React, { useState } from "react"
 import styled from "styled-components"
 import { theme } from "../../../theme/index"
@@ -11,6 +12,7 @@ export default function LoginForm() {
   //comportement
   const handleSubmit = (event) => {
     event.preventDefault() //permet d'empecher l'évènement par defaut du onSubmit
+    navigate(`/order/${username}`)
   }
 
   const handleChange = (event) => {
@@ -23,7 +25,7 @@ export default function LoginForm() {
       <h1>Bienvenue chez nous</h1>
       <h2>Connectez-vous</h2>
       <hr />
-      <TextInput placeholder={"Prénom"} value={username} onChange={handleChange} />
+      <TextInput placeholder={"Prénom"} value={username} onChange={handleChange} required />
       <PrimaryButton label={"Accéder à l'espace"} />
     </LoginFormStyled>
   )
