@@ -12,8 +12,8 @@ function App() {
   //affichage (render)
   return (
     <Router>
-      <LoginPage path='/' />
-      <OrderPage path='order/:name' />
+      <LoginPage path='login' />
+      <OrderPage path='/' />
     </Router>
   )
 }
