@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import { theme } from "../../../theme/index"
+import { theme } from "../../../../theme/index"
 
-export default function NavBar() {
-  return <NavBarStyled>NavBar</NavBarStyled>
+export default function Navbar() {
+  return <NavbarStyled>Navbar</NavbarStyled>
 }
 
-const NavBarStyled = styled.div`
+const NavbarStyled = styled.div`
   border: 1px solid blue;
   color: ${theme.colors.black};
   background-color: ${theme.colors.white};

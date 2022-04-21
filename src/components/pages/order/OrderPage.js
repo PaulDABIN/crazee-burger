@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import { theme } from "../../../theme"
-import NavBar from "./NavBar"
 import Main from "./Main"
+import Navbar from "./Navbar/Navbar"
 
 export default function OrderPage({ name }) {
   return (
     <OrderPageStyled>
-      <NavBar />
+      <Navbar />
       <Main />
     </OrderPageStyled>
   )
