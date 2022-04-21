@@ -1,9 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 import { theme } from "../../../../theme"
+import Profile from "./Profile"
 
 export default function NavbarRight() {
-  return <NavBarRightStyled>zadazd</NavBarRightStyled>
+  return (
+    <NavBarRightStyled>
+      <Profile />
+    </NavBarRightStyled>
+  )
 }
 
 const NavBarRightStyled = styled.div`
