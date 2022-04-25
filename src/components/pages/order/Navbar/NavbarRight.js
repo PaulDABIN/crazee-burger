@@ -2,10 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import { theme } from "../../../../theme"
 import Profile from "./Profile"
+import ToggleButton from "./ToggleButton"
 
 export default function NavbarRight() {
   return (
     <NavBarRightStyled>
+      <ToggleButton />
       <Profile />
     </NavBarRightStyled>
   )
