@@ -3,11 +3,13 @@ import React from "react"
 import { useState } from "react"
 import styled from "styled-components"
 import LoginForm from "./LoginForm"
+import Logo from "../../reusable/Logo"
 
 export default function LoginPage() {
   //render
   return (
     <LoginPageStyled>
+      <Logo className={"logo"} />
       <LoginForm />
     </LoginPageStyled>
   )
@@ -33,5 +35,9 @@ const LoginPageStyled = styled.div`
     right: 0;
     bottom: 0;
     z-index: -1;
+  }
+
+  .logo {
+    transform: scale(2.5);
   }
 `

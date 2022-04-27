@@ -7,7 +7,7 @@ import NavbarRight from "./NavbarRight"
 export default function Navbar() {
   return (
     <NavbarStyled>
-      <Logo />
+      <Logo onClick={() => window.location.reload()} />
       <NavbarRight />
     </NavbarStyled>
   )
