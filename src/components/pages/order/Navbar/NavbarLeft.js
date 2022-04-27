@@ -3,7 +3,13 @@ import styled from "styled-components"
 import { theme } from "../../../../theme"
 
 export default function NavbarLeft() {
-  return <NavBarLeftStyled>zdazd</NavBarLeftStyled>
+  return (
+    <NavBarLeftStyled>
+      <h1>Crazee</h1>
+      <img src='/images/logo-orange.png' alt='' />
+      <h1>Burger</h1>
+    </NavBarLeftStyled>
+  )
 }
 
 const NavBarLeftStyled = styled.div`
