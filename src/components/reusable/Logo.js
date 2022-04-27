@@ -1,18 +1,18 @@
 import React from "react"
 import styled from "styled-components"
-import { theme } from "../../../../theme"
+import { theme } from "../../theme"
 
-export default function NavbarLeft() {
+export default function Logo() {
   return (
-    <NavBarLeftStyled>
+    <LogoStyled onClick={() => window.location.reload()}>
       <h1>Crazee</h1>
       <img src='/images/logo-orange.png' alt='' />
       <h1>Burger</h1>
-    </NavBarLeftStyled>
+    </LogoStyled>
   )
 }
 
-const NavBarLeftStyled = styled.div`
+const LogoStyled = styled.div`
   /* border: 1px solid red; */
   max-height: 100%;
   min-width: 200px;
