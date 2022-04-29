@@ -2,17 +2,10 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { theme } from "../../../../theme"
 
-export default function ToggleButton() {
-  const [isChecked, setIsChecked] = useState(false)
-
-  const handleToggle = () => {
-    if (isChecked === false) alert("Mode admin activé !")
-    setIsChecked(!isChecked)
-  }
-
+export default function ToggleButton({ isChecked, onToggle }) {
   return (
     <ToggleButtonStyled>
-      <input type='checkbox' className='toggle' id='rounded' checked={isChecked} onChange={handleToggle} />
+      <input type='checkbox' className='toggle' id='rounded' checked={isChecked} onChange={onToggle} />
       <label
         htmlFor='rounded'
         className='rounded'
