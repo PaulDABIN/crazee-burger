@@ -1,9 +1,16 @@
 import React from "react"
 import styled from "styled-components"
-import { theme } from "../../../theme"
+import { theme } from "../../../../theme"
+import Basket from "./Basket/Basket"
+import Menu from "./Menu/Menu"
 
 export default function Main() {
-  return <MainStyled></MainStyled>
+  return (
+    <MainStyled>
+      <Basket />
+      <Menu />
+    </MainStyled>
+  )
 }
 
 const MainStyled = styled.div`
