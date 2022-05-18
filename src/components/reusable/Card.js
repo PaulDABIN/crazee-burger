@@ -4,13 +4,15 @@ import { fakeBurgers1 } from "../../fakeData/fakeData"
 
 export default function Card({ id, imageSource, price, title }) {
   // state
+  price = price.toFixed(2)
 
+  //console.log(roundPrice)
   // comportements
 
   // affichage
   return (
     <AppStyled>
-      <div className='fruit-style' key={id}>
+      <div className='burger-style' key={id}>
         <img className='imgburger' src={imageSource} />
         <p>{title}</p>
         <div>
@@ -23,7 +25,7 @@ export default function Card({ id, imageSource, price, title }) {
 }
 
 const AppStyled = styled.div`
-  .fruit-style {
+  .burger-style {
     border: 1px solid black;
     width: 150px;
     text-align: center;
